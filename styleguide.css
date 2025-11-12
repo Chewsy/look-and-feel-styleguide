@@ -26,6 +26,8 @@
 
     }
 
+    h2 .heading-medium {color: var(--bg-primary-dark);}
+
     body {
         --body-p: 16px;
     }
