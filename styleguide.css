@@ -6,10 +6,11 @@
 
     :root {
         /* Typografie */
+
+        /* Headings */
         --headline: 24px;
         --head: 18px;
         --subhead: 16px;
-        --body-p: 16px;
         --label: 14px;
 
         /* Kleuren */
@@ -17,10 +18,18 @@
         --bg-primary-light: hsl(168, 38%, 67%);
         --secondary-color-w: white;
         --secondary-color-b: hsl(35, 48%, 84%, 100%);
+        --secondary-color-bl: black;
+    }
+
+    body {
+        --body-p: 16px;
     }
 
     
     /* Formulier elementen */
+
+    /* Buttons */
+
 
     /* Spacing */
 
