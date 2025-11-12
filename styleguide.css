@@ -31,7 +31,7 @@
     }
 
     .cards{
-        --color: var(--bg-primary-light);
+        color: var(--bg-primary-light);
     }
 
 
