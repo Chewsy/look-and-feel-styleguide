@@ -16,23 +16,38 @@
         /* Kleuren */
         --bg-primary-dark: hsl(201, 71%, 19%);
         --bg-primary-light: hsl(168, 38%, 67%);
-        --secondary-color-w: white;
-        --secondary-color-b: hsl(35, 48%, 84%, 100%);
-        --secondary-color-bl: black;
+        --secondary-color-w: hsl(0, 0%, 100%);
+        --secondary-color-b: hsl(34, 48%, 84%);
+        --secondary-color-bl: hsl(0, 0%, 0%);
 
         /* Spacing */
         --padding: 20px;
         --margin: 10px;
 
+        /* borders */
+        --border: 1px solid var(--bg-primary-dark);
     }
 
-
-    body {
-        --body-p: 16px;
+    #kleur figure:nth-of-type(1) code {
+        background: var(--bg-primary-dark);
     }
 
-    .cards{
-        color: var(--bg-primary-light);
+    #kleur figure:nth-of-type(2) code {
+        background: var(--bg-primary-light);
+    }
+
+    #kleur figure:nth-of-type(3) code {
+        background: var(--secondary-color-w);
+        border: var(--border);
+    }
+
+    #kleur figure:nth-of-type(4) code {
+        background: var(--secondary-color-b);
+    }
+
+    #kleur figure:nth-of-type(5) code {
+        background: var(--secondary-color-bl);
+        color: var(--secondary-color-w);
     }
 
 
