@@ -30,6 +30,7 @@
 
     #kleur figure:nth-of-type(1) code {
         background: var(--bg-primary-dark);
+        color: var(--secondary-color-w);
     }
 
     #kleur figure:nth-of-type(2) code {
@@ -48,6 +49,24 @@
     #kleur figure:nth-of-type(5) code {
         background: var(--secondary-color-bl);
         color: var(--secondary-color-w);
+    }
+
+    #typografie h1 {
+        font-size: var(--headline);
+    }
+
+    #typografie h2 {
+        font-size: var(--head);
+    }
+
+    #typografie h3 {
+        font-size: var(--subhead);
+    }
+
+    #typografie h4,
+    #typografie h5,
+    #typografie h6 {
+        font-size: var(--label);
     }
 
 
