@@ -62,7 +62,7 @@
         color: var(--secondary-color-w);
     }
 
-   .headline h1 {
+    .headline h1 {
         font-size: var(--headline);
     }
 
@@ -89,6 +89,7 @@
         background-color: var(--secondary-color-w);
         display: inline-grid;
         place-items: center;
+        vertical-align: middle;
     }
 
     input[type="checkbox"]:checked {
