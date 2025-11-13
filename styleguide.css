@@ -51,11 +51,11 @@
         color: var(--secondary-color-w);
     }
 
-    #typografie h1 {
+   .headline h1 {
         font-size: var(--headline);
     }
 
-    #typografie h2 {
+    .head h2 {
         font-size: var(--head);
     }
 
@@ -65,7 +65,7 @@
 
     #typografie h4,
     #typografie h5,
-    #typografie h6 {
+    .label h6 {
         font-size: var(--label);
     }
 
