@@ -6,8 +6,6 @@
 
     :root {
         /* Typografie */
-
-        /* Headings */
         --headline: 24px;
         --head: 18px;
         --subhead: 16px;
@@ -26,7 +24,20 @@
 
         /* borders */
         --border: 1px solid var(--bg-primary-dark);
+
+        /* Checkboxes */
+        --checkbox-size: 20px;
+        --checkbox-border: 2px solid #ccc;
+
+        /* Formulier elementen */
+
+        /* Buttons */
     }
+
+
+
+
+    /* CSS STYLING OP HTML(!) */
 
     #kleur figure:nth-of-type(1) code {
         background: var(--bg-primary-dark);
@@ -69,13 +80,24 @@
         font-size: var(--label);
     }
 
+    input[type="checkbox"] {
+        appearance: none;
+        width: var(--checkbox-size);
+        height: var(--checkbox-size);
+        border: 1px solid var(--bg-primary-dark);
+        border-radius: 4px;
+        background-color: var(--secondary-color-w);
+        display: inline-grid;
+        place-items: center;
+    }
 
-    /* Formulier elementen */
+    input[type="checkbox"]:checked {
+        background-color: var(--bg-primary-dark);
+    }
 
-    /* Buttons */
-
-
-
-
-
+    input[type="checkbox"]:checked::after {
+        content: "✓";
+        color: var(--secondary-color-b);
+        font-size: var(--label);
+    }
 }
