@@ -9,29 +9,41 @@
         --headline: 24px;
         --head: 18px;
         --subhead: 16px;
+        --body: 16px;
         --label: 14px;
 
+        --font-family: Geomanist, 'Helvetica Neue', Helvetica, sans-serif;
+
         /* Kleuren */
-        --bg-primary-dark: hsl(201, 71%, 19%);
-        --bg-primary-light: hsl(168, 38%, 67%);
-        --secondary-color-w: hsl(0, 0%, 100%);
-        --secondary-color-b: hsl(34, 48%, 84%);
-        --secondary-color-bl: hsl(0, 0%, 0%);
+        --bg-dark: hsl(201, 71%, 19%);
+        --bg-light: hsl(168, 38%, 67%);
+        /* inset = diepte effect */
+        --bg-inset: hsl(201, 60%, 25%);
+        --tekst: hsl(0, 0%, 100%);
+        --accent: hsl(34, 48%, 84%);
+        --accent-light: hsl(34, 60%, 90%);
 
         /* Spacing */
         --padding: 20px;
         --margin: 10px;
+        --btn-padding-y: 12px;
+        --btn-padding-x: 24px;
+        --input-padding-y: 12px;
+        --input-padding-x: 16px;
 
-        /* borders */
-        --border: 1px solid var(--bg-primary-dark);
+        /* Borders */
+        --border: 1px solid var(--bg-dark);
+        --border-radius: 8px;
+        --border-radius-small: 4px;
+
+        /* Shadows */
+        --shadow-inset: inset 0 2px 2px hsla(0, 0%, 0%, .1);
+        --shadow-small: 0 1px 3px hsla(0, 0%, 0%, .2);
+        --shadow-button: inset 0 1px 0 var(--accent-light);
+        --focus-border: 0 0 0 2px var(--bg-light);
 
         /* Checkboxes */
         --checkbox-size: 20px;
-        --checkbox-border: 2px solid #ccc;
-
-        /* Formulier elementen */
-
-        /* Buttons */
     }
 
 
@@ -39,27 +51,53 @@
 
     /* CSS STYLING OP HTML(!) */
 
+    body {
+        background-color: var(--bg-dark);
+        color: var(--tekst);
+        font-family: var(--font-family);
+        padding: var(--padding);
+    }
+
+    hr {
+        border: 1px solid var(--accent);
+    }
+
+    /* Kleuren */
+
     #kleur figure:nth-of-type(1) code {
-        background: var(--bg-primary-dark);
-        color: var(--secondary-color-w);
+        background: var(--bg-dark);
+        color: var(--tekst);
+        border: 1px solid var(--tekst);
     }
 
     #kleur figure:nth-of-type(2) code {
-        background: var(--bg-primary-light);
+        background: var(--bg-light);
+        color: var(--bg-dark);
     }
 
     #kleur figure:nth-of-type(3) code {
-        background: var(--secondary-color-w);
+        background: var(--tekst);
         border: var(--border);
+        color: var(--bg-dark);
     }
 
     #kleur figure:nth-of-type(4) code {
-        background: var(--secondary-color-b);
+        background: var(--accent);
+        color: var(--bg-dark);
     }
 
     #kleur figure:nth-of-type(5) code {
-        background: var(--secondary-color-bl);
-        color: var(--secondary-color-w);
+        background: var(--accent);
+        color: var(--bg-dark);
+    }
+
+    /* Typografie */
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: var(--accent);
     }
 
     .headline h1 {
@@ -80,25 +118,120 @@
         font-size: var(--label);
     }
 
+    /* Formulier elementen */
+
     input[type="checkbox"] {
         appearance: none;
         width: var(--checkbox-size);
         height: var(--checkbox-size);
-        border: 1px solid var(--bg-primary-dark);
-        border-radius: 4px;
-        background-color: var(--secondary-color-w);
+        border: 1px solid var(--tekst);
+        border-radius: var(--border-radius-small);
+        background-color: var(--bg-dark);
         display: inline-grid;
         place-items: center;
         vertical-align: middle;
+        cursor: pointer;
+        box-shadow: var(--shadow-inset);
     }
 
     input[type="checkbox"]:checked {
-        background-color: var(--bg-primary-dark);
+        box-shadow: var(--shadow-inset);
     }
 
     input[type="checkbox"]:checked::after {
         content: "✓";
-        color: var(--secondary-color-b);
+        color: var(--accent);
         font-size: var(--label);
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        padding: var(--input-padding-y) var(--input-padding-x);
+        background-color: var(--bg-inset);
+        color: var(--tekst);
+        border: none;
+        border-radius: var(--border-radius);
+        font-family: var(--font-family);
+        font-size: var(--label);
+        box-shadow: var(--shadow-inset);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: var(--bg-light);
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        box-shadow: var(--shadow-inset), var(--focus-border);
+    }
+
+    button,
+    input[type="submit"] {
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+        background-color: var(--accent);
+        color: var(--bg-dark);
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        font-size: var(--label);
+        font-family: var(--font-family);
+        cursor: pointer;
+        box-shadow: var(--shadow-button), var(--shadow-small);
+    }
+
+    button:hover,
+    input[type="submit"]:hover {
+        background-color: var(--bg-light);
+        box-shadow: var(--shadow-small);
+    }
+
+    button.secondary {
+        color: var(--tekst);
+        background-color: var(--bg-inset);
+        border: 2px solid var(--bg-inset);
+        box-shadow: none;
+    }
+
+    button.secondary:hover {
+        text-decoration: underline;
+    }
+
+    a {
+        color: var(--bg-light);
+        text-decoration: underline;
+    }
+
+    .select-wrap {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    select {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px 12px;
+        font-size: var(--body);
+        border-radius: 6px;
+        background-color: var(--accent);
+        color: var(--bg-dark);
+        cursor: pointer;
+        appearance: none;
+        box-shadow: inset 0 1px 0 var(--accent-light), 0 2.5px 0 var(--bg-dark);
+        border: 1.5px solid var(--bg-dark);
+        font-family: var(--font-family);
+    }
+
+    select:focus {
+        border-color: var(--bg-light);
+        box-shadow: inset 0 1px 0 var(--accent-light), 0 2.5px 0 var(--bg-dark);
+        outline: none;
     }
 }
