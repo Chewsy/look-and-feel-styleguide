@@ -6,11 +6,11 @@
 
     :root {
         /* Kleuren */
-        --bg-dark: hsl(201, 71%, 19%);
-        --bg-light: hsl(168, 38%, 67%);
+        --background-dark: hsl(201, 71%, 19%);
+        --background-light: hsl(168, 38%, 67%);
         /* inset = diepte effect */
-        --bg-inset: hsl(201, 60%, 25%);
-        --tekst: hsl(0, 0%, 100%);
+        --background-inset: hsl(201, 60%, 25%);
+        --text: hsl(0, 0%, 100%);
         --accent: hsl(34, 48%, 84%);
         --accent-light: hsl(34, 60%, 90%);
 
@@ -26,13 +26,13 @@
         /* Spacing */
         --padding: 20px;
         --margin: 10px;
-        --btn-padding-y: 12px;
-        --btn-padding-x: 24px;
+        --button-padding-y: 12px;
+        --button-padding-x: 24px;
         --input-padding-y: 12px;
         --input-padding-x: 16px;
 
         /* Borders */
-        --border: 1px solid var(--bg-dark);
+        --border: 1px solid var(--background-dark);
         --border-radius: 8px;
         --border-radius-small: 4px;
 
@@ -40,7 +40,7 @@
         --shadow-inset: inset 0 2px 2px hsla(0, 0%, 0%, .1);
         --shadow-small: 0 1px 3px hsla(0, 0%, 0%, .2);
         --shadow-button: inset 0 1px 0 var(--accent-light);
-        --focus-border: 0 0 0 2px var(--bg-light);
+        --focus-border: 0 0 0 2px var(--background-light);
 
         /* Checkboxes */
         --checkbox-size: 20px;
@@ -52,8 +52,8 @@
     /* CSS STYLING OP HTML(!) */
 
     body {
-        background-color: var(--bg-dark);
-        color: var(--tekst);
+        background-color: var(--background-dark);
+        color: var(--text);
         font-family: var(--font-family);
         padding: var(--padding);
     }
@@ -65,30 +65,30 @@
     /* Kleuren */
 
     #kleur figure:nth-of-type(1) code {
-        background: var(--bg-dark);
-        color: var(--tekst);
-        border: 1px solid var(--tekst);
+        background: var(--background-dark);
+        color: var(--text);
+        border: 1px solid var(--text);
     }
 
     #kleur figure:nth-of-type(2) code {
-        background: var(--bg-light);
-        color: var(--bg-dark);
+        background: var(--background-light);
+        color: var(--background-dark);
     }
 
     #kleur figure:nth-of-type(3) code {
-        background: var(--tekst);
+        background: var(--text);
         border: var(--border);
-        color: var(--bg-dark);
+        color: var(--background-dark);
     }
 
     #kleur figure:nth-of-type(4) code {
         background: var(--accent);
-        color: var(--bg-dark);
+        color: var(--background-dark);
     }
 
     #kleur figure:nth-of-type(5) code {
         background: var(--accent);
-        color: var(--bg-dark);
+        color: var(--background-dark);
     }
 
     /* Typografie */
@@ -124,9 +124,9 @@
         appearance: none;
         width: var(--checkbox-size);
         height: var(--checkbox-size);
-        border: 1px solid var(--tekst);
+        border: 1px solid var(--text);
         border-radius: var(--border-radius-small);
-        background-color: var(--bg-dark);
+        background-color: var(--background-dark);
         display: inline-grid;
         place-items: center;
         vertical-align: middle;
@@ -151,8 +151,8 @@
     input[type="email"],
     textarea {
         padding: var(--input-padding-y) var(--input-padding-x);
-        background-color: var(--bg-inset);
-        color: var(--tekst);
+        background-color: var(--background-inset);
+        color: var(--text);
         border: none;
         border-radius: var(--border-radius);
         font-family: var(--font-family);
@@ -162,7 +162,7 @@
 
     input::placeholder,
     textarea::placeholder {
-        color: var(--bg-light);
+        color: var(--background-light);
     }
 
     input:focus,
@@ -173,9 +173,9 @@
 
     button,
     input[type="submit"] {
-        padding: var(--btn-padding-y) var(--btn-padding-x);
+        padding: var(--button-padding-y) var(--button-padding-x);
         background-color: var(--accent);
-        color: var(--bg-dark);
+        color: var(--background-dark);
         border: none;
         border-radius: var(--border-radius);
         font-weight: 600;
@@ -187,14 +187,14 @@
 
     button:hover,
     input[type="submit"]:hover {
-        background-color: var(--bg-light);
+        background-color: var(--background-light);
         box-shadow: var(--shadow-small);
     }
 
     button.secondary {
-        color: var(--tekst);
-        background-color: var(--bg-inset);
-        border: 2px solid var(--bg-inset);
+        color: var(--text);
+        background-color: var(--background-inset);
+        border: 2px solid var(--background-inset);
         box-shadow: none;
     }
 
@@ -203,7 +203,7 @@
     }
 
     a {
-        color: var(--bg-light);
+        color: var(--background-light);
         text-decoration: underline;
     }
 
@@ -221,17 +221,17 @@
         font-size: var(--body);
         border-radius: 6px;
         background-color: var(--accent);
-        color: var(--bg-dark);
+        color: var(--background-dark);
         cursor: pointer;
         appearance: none;
-        box-shadow: inset 0 1px 0 var(--accent-light), 0 2.5px 0 var(--bg-dark);
-        border: 1.5px solid var(--bg-dark);
+        box-shadow: inset 0 1px 0 var(--accent-light), 0 2.5px 0 var(--background-dark);
+        border: 1.5px solid var(--background-dark);
         font-family: var(--font-family);
     }
 
     select:focus {
-        border-color: var(--bg-light);
-        box-shadow: inset 0 1px 0 var(--accent-light), 0 2.5px 0 var(--bg-dark);
+        border-color: var(--background-light);
+        box-shadow: inset 0 1px 0 var(--accent-light), 0 2.5px 0 var(--background-dark);
         outline: none;
     }
 }
