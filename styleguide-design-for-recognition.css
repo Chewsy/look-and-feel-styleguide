@@ -5,15 +5,6 @@
 @layer styleguide {
 
     :root {
-        /* Typografie */
-        --headline: 24px;
-        --head: 18px;
-        --subhead: 16px;
-        --body: 16px;
-        --label: 14px;
-
-        --font-family: Geomanist, 'Helvetica Neue', Helvetica, sans-serif;
-
         /* Kleuren */
         --bg-dark: hsl(201, 71%, 19%);
         --bg-light: hsl(168, 38%, 67%);
@@ -22,6 +13,15 @@
         --tekst: hsl(0, 0%, 100%);
         --accent: hsl(34, 48%, 84%);
         --accent-light: hsl(34, 60%, 90%);
+
+         /* Typografie */
+        --headline: 24px;
+        --head: 18px;
+        --subhead: 16px;
+        --body: 16px;
+        --label: 14px;
+
+        --font-family: Geomanist, 'Helvetica Neue', Helvetica, sans-serif;
 
         /* Spacing */
         --padding: 20px;
