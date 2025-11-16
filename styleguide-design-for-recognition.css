@@ -33,8 +33,10 @@
 
         /* Borders */
         --border: 1px solid var(--background-dark);
-        --border-radius: 8px;
+        --border-radius-default: 8px;
         --border-radius-small: 4px;
+        --border-radius-smaller: 2px;
+        --border-radius-smallest: 1px;
 
         /* Shadows */
         --shadow-inset: inset 0 2px 2px hsla(0, 0%, 0%, .1);
@@ -59,7 +61,7 @@
     }
 
     hr {
-        border: 1px solid var(--accent);
+        border: var(--border-radius-smallest) solid var(--accent);
     }
 
     /* Kleuren */
@@ -67,7 +69,7 @@
     #kleur figure:nth-of-type(1) code {
         background: var(--background-dark);
         color: var(--text);
-        border: 1px solid var(--text);
+        border: var(--border-radius-smallest) solid var(--text);
     }
 
     #kleur figure:nth-of-type(2) code {
@@ -124,7 +126,7 @@
         appearance: none;
         width: var(--checkbox-size);
         height: var(--checkbox-size);
-        border: 1px solid var(--text);
+        border: var(--border-radius-smallest) solid var(--text);
         border-radius: var(--border-radius-small);
         background-color: var(--background-dark);
         display: inline-grid;
@@ -154,7 +156,7 @@
         background-color: var(--background-inset);
         color: var(--text);
         border: none;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius-default);
         font-family: var(--font-family);
         font-size: var(--label);
         box-shadow: var(--shadow-inset);
@@ -177,7 +179,7 @@
         background-color: var(--accent);
         color: var(--background-dark);
         border: none;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius-default);
         font-weight: 600;
         font-size: var(--label);
         font-family: var(--font-family);
@@ -225,7 +227,7 @@
         cursor: pointer;
         appearance: none;
         box-shadow: inset 0 1px 0 var(--accent-light), 0 2.5px 0 var(--background-dark);
-        border: 1.5px solid var(--background-dark);
+        border: var(--border-radius-smaller) solid var(--background-dark);
         font-family: var(--font-family);
     }
 
