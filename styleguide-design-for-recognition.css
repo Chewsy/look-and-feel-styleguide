@@ -13,6 +13,7 @@
         --text: hsl(0, 0%, 100%);
         --accent: hsl(34, 48%, 84%);
         --accent-light: hsl(34, 60%, 90%);
+         --accent-dark:  hsl(0, 0%, 0%);
 
          /* Typografie */
         --headline: 24px;
