@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+..<!DOCTYPE html>
 <html lang="nl">
 
 <head>
@@ -88,89 +88,98 @@
 
   </section>
 
+<section id="formulieren">
 
-  <section id="formulieren">
+  <hr>
 
-    <hr>
+  <h2>Formulier elementen</h2>
+  <p>Bij het onderdeel formulier elementen worden input, radio, checkbox en buttons gedemonstreerd.</p>
 
-    <h2>Formulier elementen</h2>
-    <p>Bij het onderdeel formulier elementen worden input, radio, checkbox en buttons gedemonstreerd.</p>
+  <form class="">
 
-    <form class="">
+    <p>
+      <label class="">
+        Text:
+        <input type="text" class="">
+      </label>
+    </p>
+
+    <p>
+      <label class="">
+        Textarea:
+        <textarea class=""></textarea>
+      </label>
+    </p>
+
+    <fieldset>
+      <legend class="">Checkbox</legend>
+
+      <label class="">
+        <input type="checkbox" name="checkbox-1" checked class="">
+        Checkbox 1
+      </label>
+
+      <label class="">
+        <input type="checkbox" name="checkbox-2" class="">
+        Checkbox 2
+      </label>
+
+      <label class="">
+        <input type="checkbox" name="chekcbox-3" class="">
+        Checkbox 3
+      </label>
+    </fieldset>
+
+    <p>
+      <label class="">
+        Search:
+        <input type="search" class="">
+      </label>
+    </p>
+
+    <p>
+      <label class="">
+        Tel:
+        <input type="tel" class="">
+      </label>
+    </p>
+
+    <!-- FOUTMELDING  -->
+    <h2>Foutmeldingen</h2>
+      <p>Zo ziet een foutmelding eruit binnen een formulier.</p>
 
       <p>
-        <label class="">
-          Text:
-          <input type="text" class="">
-        </label>
-      </p>
-
-      <p>
-        <label class="">
-          Textarea:
-          <textarea class=""></textarea>
-        </label>
-      </p>
-
-      <fieldset>
-        <legend class="">Checkbox</legend>
-
-        <label class="">
-          <input type="checkbox" name="checkbox-1" checked class="">
-          Checkbox 1
-        </label>
-
-        <label class="">
-          <input type="checkbox" name="checkbox-2" class="">
-          Checkbox 2
-        </label>
-
-        <label class="">
-          <input type="checkbox" name="chekcbox-3" class="">
-          Checkbox 3
-        </label>
-      </fieldset>
-
-      <p>
-        <label class="">
-          Search:
-          <input type="search" class="">
-        </label>
-      </p>
-
-      <p>
-        <label class="">
-          Tel:
-          <input type="tel" class="">
-        </label>
-      </p>
-
-      <p>
-        <input type="submit" value="Verstuur" class="">
-      </p>
-
-      <hr>
-
-      <h2>Buttons</h2>
-      <p>
-        <button type="button">Bevestig</button>
-        <button type="button" class="secondary">Annuleer</button>
-        <a href="#">link</a>
-      </p>
-
-      <div class="select-wrap">
         <label>
-          <select>
-            <option>Filter</option>
-            <option>Optie 1</option>
-            <option>Optie 2</option>
-          </select>
+          Text (met fout):
+          <input type="text" class="error">
+          <label class="error-message">Dit veld is verplicht</label>
         </label>
-      </div>
+      </p>
 
     </form>
 
-  </section>
+    <h2>Buttons</h2>
+    <p>
+      <button type="button">Bevestig</button>
+      <button type="button" class="secondary">Annuleer</button>
+      <a href="#">link</a>
+    </p>
+
+    <div class="select-wrap">
+      <label>
+        <select>
+          <option>Filter</option>
+          <option>Optie 1</option>
+          <option>Optie 2</option>
+        </select>
+      </label>
+    </div>
+
+  </form>
+
+</section>
+
+  
 
 
   <!-- En eventueel meer categorieën en componenten -->
